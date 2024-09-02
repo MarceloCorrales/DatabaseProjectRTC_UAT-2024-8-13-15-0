@@ -16,8 +16,8 @@ steps:
     packageType: 'sdk'
     version: '8.0.401'
     includePreviewVersions: true
-    
 
-- task: VSBuild@1
+- task: DotNetCoreCLI@2
   inputs:
-    solution: '**\*.sqlproj'
+    command: 'build'
+    projects: '**\*.sqlproj'
